@@ -31,7 +31,12 @@ app.get('/about', (req, res)=>{
 	});
 });
 
-
+app.get('/projects', (req, res)=>{
+	res.render('projects.hbs', {
+		pageTitle: 'Projects Page',
+		currentYear: new Date().getFullYear()
+	});
+});
 app.get('/home', (req, res)=>{
 	res.render('home.hbs', {
 		pageTitle: 'home Page',
